@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Art Gallery | Customer</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/newcust.css')}}">
+  <style>
+    body{
+      background: url('/static/styles/img/Image5.jpg');
+    }
+  </style>
+</head>
+
+<body>
+  <div class = "container" >  
+    <form id = "contact" method = "POST" action = "/exist_cust" autocomplete="off">
+      <h3>Customer</h3><br>
+      <fieldset>
+        <input placeholder = "Email ID" type = "text" tabindex = "1" name = 'email'>
+      </fieldset>
+      <fieldset>
+        <button name = "submit" type = "submit" id = "contact-submit"><a href='/order_art' style='text-decoration: none;'></a>ENTER</button>
+        <p style="color: red;">{{msg}}</p>
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>

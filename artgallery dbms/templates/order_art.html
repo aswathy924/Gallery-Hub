@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Art Gallery | Artworks</title>
+  <style>
+    body {
+      background: url('/static/styles/img/Image8.webp');
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/customers.css') }}"> 
+</head>
+
+<body>
+  <h1 style="background-color: #f5aa31">ARTWORKS</h1>
+  <div class="table-container">
+    <div class="table-header">
+      <form action='/clogin'>
+        <button class="add-another btn btn-success">Home</button>
+      </form>
+      <form action='/new_order'>
+        <button class="add-another btn btn-success">Order Art</button>
+      </form>
+    </div>
+    <br>
+    <table class="customer-table table table-hover" style="width:100%" border="1 ">
+      <thead>
+        <tr>
+          <th><h3>Art ID</h3></th>
+          <th><h3>Art Title</h3></th>
+          <th><h3>Art Price</h3></th>
+          <th><h3>Art Type</h3></th>
+          <th><h3>Art Year</h3></th>
+          <th><h3>Artist Name</h3></th>
+          <th><h3>Artist Style</h3></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if z is defined %}
+          {% for i in range(z) %}
+            <tr>
+              <td><h3>{{ c[i][0] }}</h3></td>
+              <td><h3>{{ c[i][1] }}</h3></td>
+              <td><h3>{{ c[i][2] }}</h3></td>
+              <td><h3>{{ c[i][3] }}</h3></td>
+              <td><h3>{{ c[i][4] }}</h3></td>
+              <td><h3>{{ c[i][5] }}</h3></td>
+              <td><h3>{{ c[i][6] }}</h3></td>
+            </tr>
+          {% endfor %}
+        {% else %}
+          <tr>
+            <td colspan="7"><h3>No data available</h3></td>
+          </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+</body>
+
+</html>

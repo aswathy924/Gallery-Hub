@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Art Gallery | Art Orders</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/newcust.css')}}">
+  <style>
+    body{
+      background: url('/static/styles/img/Image5.jpg');
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">  
+    <form id="contact" method="POST" action="/clogin" autocomplete="off">
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit"><a href='/newcust' style='text-decoration: none;'>New Customer</a></button>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit"><a href='/exist_cust' style='text-decoration: none;'>Already Existing Customer</a></button>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit"><a href='/front' style='text-decoration: none;'>Home</a></button>
+      </fieldset>
+      <fieldset>
+        <p style="color: red;">{{msg}}</p>
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>
