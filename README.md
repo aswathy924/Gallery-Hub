@@ -1,0 +1,2 @@
+Designed and implemented a comprehensive Art Gallery Management System using Python Flask and MySQL. Enabled customers to browse and purchase artworks, explore artist profiles, and track orders. Provided admin functionalities for 
+managing artists, customers, artwork details, and orders. Focused on creating a user-friendly interface and ensuring efficient database operations for seamless management and navigation. 
